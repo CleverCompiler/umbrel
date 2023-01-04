@@ -90,6 +90,11 @@ then
   UMBREL_INSTALL_PATH="$(echo "${arguments}" | sed 's/.*--install-path \([^ ]*\).*/\1/')"
 fi
 
+function pause(){
+ read -s -n 1 -p "Press any key to continue . . ."
+ echo ""
+}
+
 get_umbrel_version() {
   version="${UMBREL_VERSION}"
   if [[ "${version}" = "release" ]]
@@ -160,6 +165,7 @@ install_umbrel() {
   version=$(get_umbrel_version)
   curl --location "https://api.github.com/repos/${UMBREL_REPO}/tarball/${version}" | \
     tar --extract --gzip --strip-components=1 --directory="${UMBREL_INSTALL_PATH}"
+  pause
 }
 
 install_systemd_service() {
