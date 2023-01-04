@@ -234,26 +234,26 @@ You can pass flags to the installer like this:
 
   curl -L https://umbrel.sh | bash -s -- --no-install-docker --no-install-compose
 
-Waiting for 30 seconds...
+Waiting for 10 seconds...
 
 You may press Ctrl+C now to abort the install.
 
 EOF
-    sleep 30
+    sleep 10
   fi
 
-  if [[ "${INSTALL_UMBREL}" = "true" ]]
-  then
-    mkdir -p "${UMBREL_INSTALL_PATH}"
-    if [[ "$(ls --almost-all "${UMBREL_INSTALL_PATH}")" ]]
-    then
-      echo "Error: Umbrel install path \"${UMBREL_INSTALL_PATH}\" already contains files"
-      echo "You can install Umbrel in a custom location with:"
-      echo
-      echo "  curl -L https://umbrel.sh | bash -s -- --install-path /some/path"
-      exit 1
-    fi
-  fi
+  # if [[ "${INSTALL_UMBREL}" = "true" ]]
+  # then
+  #   mkdir -p "${UMBREL_INSTALL_PATH}"
+  #   if [[ "$(ls --almost-all "${UMBREL_INSTALL_PATH}")" ]]
+  #   then
+  #     echo "Error: Umbrel install path \"${UMBREL_INSTALL_PATH}\" already contains files"
+  #     echo "You can install Umbrel in a custom location with:"
+  #     echo
+  #     echo "  curl -L https://umbrel.sh | bash -s -- --install-path /some/path"
+  #     exit 1
+  #   fi
+  # fi
 
   if [[ "${UPDATE_APT}" = "true" ]]
   then
