@@ -287,7 +287,7 @@ EOF
 
   if [[ "${INSTALL_UMBREL}" = "true" ]]
   then
-    install_umbrel
+    #install_umbrel
 
     if [[ "${INSTALL_START_SCRIPT}" = "true" ]]
     then
