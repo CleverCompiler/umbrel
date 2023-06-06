@@ -29,5 +29,5 @@ The following environment variables are set in `.env` file of the project's root
 | ------------- | ------------- | ------------- |
 | `PORT` | Web server port within container | `2000` |
 | `UMBREL_AUTH_SECRET` | A shared secret for manager, app-auth and app-proxy | `umbrel` |
-| `MANAGER_IP` | Umbrel's manager IP | `10.21.21.4` |
+| `MANAGER_IP` | Umbrel's manager IP | `10.22.21.4` |
 | `MANAGER_PORT` | Umbrel's manager container port | `9005` |
